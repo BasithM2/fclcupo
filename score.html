@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLE</title>
+    <link rel="icon" type="image/x-icon" href="./1000204935-removebg-preview.png">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #012c55;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #f05a24;
+        }
+
+
+        .scoreboard {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px;
+            background: linear-gradient(145deg, #2a2a2a, #3e3e3e);
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .scoreboard h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            color: #f0a500;
+            text-shadow: 2px 2px #000;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #555;
+        }
+
+        th {
+            background-color: #444;
+            font-size: 20px;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #3a3a3a;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #333;
+        }
+
+        tbody tr:hover {
+            background-color: #555;
+            cursor: pointer;
+        }
+
+        .team-name {
+            text-align: left;
+            padding-left: 20px;
+            font-weight: bold;
+        }
+
+        .status {
+            font-size: 22px;
+            color: #28a745;
+        }
+
+        .loss {
+            font-size: 22px;
+            color: #dc3545;
+        }
+
+        .draw {
+            font-size: 22px;
+            color: #ffc107;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #012c55;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 36px;
+            }
+
+            .scoreboard {
+                padding: 20px;
+            }
+
+            .scoreboard h2 {
+                font-size: 24px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>FIDA CHAMPIONS LEAGUE</h1>
+        <!-- Navigation Menu -->
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./score.html">Table</a>
+            <a href="./stats.html">Stats</a>
+            <a href="./fullplayers.html">Players</a>
+        </nav>
+    </header>
+
+    <!-- Scoreboard Section -->
+    <div class="scoreboard">
+        <h2>Current Standings</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Club</th>
+                    <th>MP</th>
+                    <th>W</th>
+                    <th>D</th>
+                    <th>L</th>
+                    <th>GF</th>
+                    <th>GA</th>
+                    <th>GD</th>
+                    <th>Pts</th>
+                    <th>Last 5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="team-name">Kyloq FC</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>10</td>
+                    <td>6</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td class="status">✔️<b>-</b></td>
+                </tr>
+                <tr>
+                    <td class="team-name">COSMOS FC</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td class="status">✔️<b>-</b></td>
+                </tr>
+                <tr>
+                    <td class="team-name">ULTRAAS FC</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td class="loss">❌</td>
+                </tr>
+                <tr>
+                    <td class="team-name">KASAAB FC</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>8</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td class="loss">❌</td>
+                </tr>
+                
+                
+               
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>Contact Us: 123-456-789</p>
+    </div>
+</body>
+</html>

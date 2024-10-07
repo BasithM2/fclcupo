@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Facts</title>
+    <style>
+        /* Base Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to top right, #0d1a2b, #3a4a65);
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        /* Scoreboard Styling */
+        .scoreboard {
+            width: 90%;
+            max-width: 1200px;
+            background: #1e2a3f;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        /* Team Info Styling */
+        .team-info {
+            width: 25%;
+            text-align: center;
+        }
+
+        .team-logo {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 15px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease; /* Smooth transition for glow effect */
+        }
+
+        .team-logo.red {
+            
+            cursor: pointer;
+        }
+
+        .team-logo.blue {
+            
+            cursor: pointer;
+        }
+
+        .team-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+        }
+
+        /* Glow effect class */
+        .glow {
+            box-shadow: 0 0 20px 10px #fff, 0 0 30px 15px #fff;
+        }
+
+        .team-name {
+            font-size: 1.8em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Match Score Styling */
+        .match-score {
+            width: 50%;
+            text-align: center;
+        }
+
+        .score {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 5em;
+            font-weight: bold;
+            color: #ffd700;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .score span {
+            margin: 0 15px;
+        }
+
+        /* Match Facts Styling */
+        .match-facts {
+            margin-top: 30px;
+        }
+
+        .facts-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            margin: 5px 0;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        .fact-label {
+            width: 40%;
+            text-align: left;
+            font-size: 1.2em;
+        }
+
+        .fact-value {
+            width: 25%;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.4em;
+        }
+
+        .fact-value.red {
+            color: #ff4e4e;
+        }
+
+        .fact-value.blue {
+            color: #4e88ff;
+        }
+
+        /* Match Time Styling */
+        .match-time {
+            font-size: 3em;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #ffd700;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Additional Elements */
+        .possession {
+            background: linear-gradient(to right, #ff4e4e 50%, #4e88ff 50%);
+            border-radius: 5px;
+            padding: 10px 0;
+            margin: 20px 0;
+        }
+
+        .possession div {
+            width: 50%;
+            float: left;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .possession .red {
+            color: #ff4e4e;
+        }
+
+        .possession .blue {
+            color: #4e88ff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="scoreboard">
+            <!-- Team Info Left -->
+            <div class="team-info">
+                <div class="team-logo red" id="logo-left">
+                    <a href="./playes1.html"><img src="White_Black_Elegant_Concept_Football_Club_Logo-removebg-preview (1).png" alt="Kylaq Fc Logo"></a>
+                </div>
+                <div class="team-name">
+                    Kylaq Fc
+                </div>
+            </div>
+
+            <!-- Match Score -->
+            <div class="match-score">
+                <div class="score">
+                    <span class="score-left">8</span>
+                    <span>-</span>
+                    <span class="score-right">4</span>
+                </div>
+
+                <!-- Match Stats -->
+                <div class="match-facts">
+                    <div class="facts-row">
+                        <div class="fact-label">Shots</div>
+                        <div class="fact-value red">11</div>
+                        <div class="fact-value blue">8</div>
+                    </div>
+                    <div class="facts-row">
+                        <div class="fact-label">Shots on Target</div>
+                        <div class="fact-value red">9</div>
+                        <div class="fact-value blue">6</div>
+                    </div>
+                    <div class="facts-row">
+                        <div class="fact-label">Fouls Committed</div>
+                        <div class="fact-value red">1</div>
+                        <div class="fact-value blue">2</div>
+                    </div>
+                    <div class="facts-row">
+                        <div class="fact-label">Yellow Cards</div>
+                        <div class="fact-value red">0</div>
+                        <div class="fact-value blue">0</div>
+                    </div>
+                    <div class="facts-row">
+                        <div class="fact-label">Red Cards</div>
+                        <div class="fact-value red">0</div>
+                        <div class="fact-value blue">0</div>
+                    </div>
+                    <div class="facts-row">
+                        <div class="fact-label">Freekick</div>
+                        <div class="fact-value red">0</div>
+                        <div class="fact-value blue">0</div>
+                    </div>
+                    <div class="facts-row">
+                        <div class="fact-label">Corners</div>
+                        <div class="fact-value red">3</div>
+                        <div class="fact-value blue">2</div>
+                    </div>
+                </div>
+
+                <!-- Possession & Time -->
+                <div class="possession">
+                    <div class="red">75%</div>
+                    <div class="blue">25%</div>
+                </div>
+                <div class="match-time">
+                    90:00
+                </div>
+            </div>
+
+            <!-- Team Info Right -->
+            <div class="team-info">
+                <div class="team-logo blue" id="logo-right">
+                    <a href="./players2.html"><img src="Black_Gold_White_Modern_Football_Club_Badge_Logo-removebg-preview.png" alt="Kasaab Fc Logo"></a>
+                </div>
+                <div class="team-name">
+                    Kasaab Fc
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Glow Effect -->
+    <script>
+        // Add click event listeners to logos
+        document.getElementById('logo-left').addEventListener('click', function() {
+            this.classList.toggle('glow'); // Toggle the glow class on click
+        });
+
+        document.getElementById('logo-right').addEventListener('click', function() {
+            this.classList.toggle('glow'); // Toggle the glow class on click
+        });
+    </script>
+</body>
+</html>

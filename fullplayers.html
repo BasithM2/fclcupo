@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Players</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            width: 100%;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+            text-align: center;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+        .card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-top: 15px;
+        }
+        .player-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0 5px;
+            color: #007bff;
+        }
+        .player-role {
+            font-size: 16px;
+            color: #6c757d;
+            margin-bottom: 10px;
+        }
+        .team-logo {
+            margin-top: 10px;
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="#" alt="Yasir MK">
+            <div class="player-name">Yasir MK</div>
+            <div class="player-role">Striker</div>
+            <img class="team-logo" src="Blue_White_Minimalist_Modern_Badge_Football_Club_Logo-removebg-preview.png" alt="Royal Challengers">
+        </div>
+        <div class="card">
+            <img src="#" alt="Shameem E">
+            <div class="player-name">Shameem E</div>
+            <div class="player-role">Center Back</div>
+            <img class="team-logo" src="Black_Gold_White_Modern_Football_Club_Badge_Logo-removebg-preview.png" alt="Super Kings">
+        </div>
+        <div class="card">
+            <img src="#" alt="Razi A">
+            <div class="player-name">Razi A</div>
+            <div class="player-role">Goal Keeper</div>
+            <img class="team-logo" src="Blue_Red_Modern_Badge_Football_Club_Logo-removebg-preview (1).png" alt="Super Kings">
+        </div>
+        <div class="card">
+            <img src="#" alt="Hadi MF">
+            <div class="player-name">Hadi MF</div>
+            <div class="player-role">Striker</div>
+            <img class="team-logo" src="White_Black_Elegant_Concept_Football_Club_Logo-removebg-preview (1).png" alt="Super Kings">
+        </div>
+        <div class="card">
+            <img src="#" alt="Riyan K">
+            <div class="player-name">Riyan K</div>
+            <div class="player-role">Striker</div>
+            <img class="team-logo" src="Black_Gold_White_Modern_Football_Club_Badge_Logo-removebg-preview.png" alt="Super Kings">
+        </div>
+        <!-- Add more player cards here -->
+    </div>
+</body>
+</html>
